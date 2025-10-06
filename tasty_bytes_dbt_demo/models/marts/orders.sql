@@ -44,3 +44,4 @@ JOIN {{ ref('raw_pos_location') }} l
     ON oh.location_id = l.location_id
 LEFT JOIN {{ ref('raw_customer_customer_loyalty') }} cl
     ON oh.customer_id = cl.customer_id
+    
