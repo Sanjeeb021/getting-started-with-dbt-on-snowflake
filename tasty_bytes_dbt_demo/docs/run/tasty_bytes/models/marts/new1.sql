@@ -1,0 +1,24 @@
+
+  
+    
+
+        create or replace transient table tasty_bytes_dbt_db.dev.new1
+         as
+        (SELECT
+  c.CUSTOMER_ID,
+  c.FIRST_NAME,
+  c.LAST_NAME,
+  c.E_MAIL,
+  c.PHONE_NUMBER,
+  c.POSTAL_CODE,
+  c.GENDER,
+  c.MARITAL_STATUS,
+  c.SIGN_UP_DATE,
+  ct.CITY,
+  ct.CITY_POPULATION
+FROM TASTY_BYTES_DBT_DB.RAW.CUSTOMER_LOYALTY c
+LEFT JOIN TASTY_BYTES_DBT_DB.RAW.COUNTRY ct ON c.COUNTRY = ct.COUNTRY
+;
+        );
+      
+  
